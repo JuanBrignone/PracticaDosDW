@@ -4,6 +4,8 @@ import { useNavigation } from '@react-navigation/native';
 
 const { width } = Dimensions.get('window');
 
+//ESTE ES EL PLANETASCARD
+
 export default function PlanetaItem({ planet, onDelete, updatePlanetInList }) {
   const navigation = useNavigation();
 

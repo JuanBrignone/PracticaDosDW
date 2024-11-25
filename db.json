@@ -1,12 +1,14 @@
 {
   "planets": [
     {
-      "id": "1",
       "name": "Mercury",
       "description": "The smallest and closest planet to the Sun in the Solar System.",
       "moons": 0,
-      "moon_names": [],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg"
+      "moon_names": [
+        ""
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg",
+      "id": "1"
     },
     {
       "id": "2",

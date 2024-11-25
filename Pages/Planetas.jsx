@@ -5,6 +5,7 @@ import { fetchPlanets, deletePlanet } from '../Components/api';
 import PlanetaItem from '../Components/PlanetItem';
 
 const { width } = Dimensions.get('window');
+//ESTE ES EL HOME
 
 export default function Planetas() {
   const [planets, setPlanets] = useState([]);

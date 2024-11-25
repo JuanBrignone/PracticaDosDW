@@ -2,17 +2,16 @@ import fetch from 'node-fetch';
 
 export const fetchPlanets = async () => {
   try {
-    console.log('Fetching planets...');
     const response = await fetch('http://192.168.1.9:3000/planets');
     console.log('Response received:', response);
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error('error');
     }
     const data = await response.json();
     console.log('Data received:', data);
     return data;
   } catch (error) {
-    console.error('Error fetching planets:', error);
+    console.error('Error obteniendo planetas:', error);
     throw error;
   }
 };
@@ -23,10 +22,10 @@ export const deletePlanet = async (id) => {
       method: 'DELETE',
     });
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error('error');
     }
   } catch (error) {
-    console.error('Error deleting planet:', error);
+    console.error('Error eliminando planeta:', error);
     throw error;
   }
 };
@@ -41,12 +40,12 @@ export const addPlanet = async (planet) => {
       body: JSON.stringify(planet),
     });
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error('error');
     }
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('Error adding planet:', error);
+    console.error('Error añadiendo planetas:', error);
     throw error;
   }
 };
@@ -61,12 +60,12 @@ export const updatePlanet = async (id, updatedPlanet) => {
       body: JSON.stringify(updatedPlanet),
     });
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error('error');
     }
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('Error updating planet:', error);
+    console.error('Error actualizando planeta:', error);
     throw error;
   }
 };
